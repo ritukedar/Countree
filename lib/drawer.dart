@@ -1,5 +1,6 @@
 import 'package:countree/screens/certificate.dart';
 import 'package:countree/screens/donation_page.dart';
+import 'package:countree/screens/maps.dart';
 import 'package:flutter/material.dart';
 
 class drawer extends StatefulWidget {
@@ -108,17 +109,22 @@ class _drawerState extends State<drawer> {
                   ),
                 ),
               ),
-              ListTile(
-                leading: Image.asset(
-                  "assets/images/location.png",
-                  scale: 0.9,
-                ),
-                title: Text(
-                  'Location',
-                  style: TextStyle(
-                    fontFamily: 'OtomanopeeOne-Regular',
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MapSample()));
+                },
+                child: ListTile(
+                  leading: Image.asset(
+                    "assets/images/location.png",
+                    scale: 0.9,
+                  ),
+                  title: Text(
+                    'Location',
+                    style: TextStyle(
+                      fontFamily: 'OtomanopeeOne-Regular',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),

@@ -13,13 +13,17 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Countree',
-          style:
-              TextStyle(color: Color(0xff008101), fontWeight: FontWeight.w700),
-        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 68.0),
+            child: Image.asset(
+              "assets/images/logo.png",
+              scale: 2.5,
+            ),
+          ),
+        ],
         backgroundColor: Color(0xffDEF9FF),
-        iconTheme: IconThemeData(color: Color(0xff008101)),
+        iconTheme: IconThemeData(color: Color(0xff044415)),
       ),
       drawer: drawer(),
       body: SingleChildScrollView(

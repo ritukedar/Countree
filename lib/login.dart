@@ -17,7 +17,7 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffDEF9FF),
+        backgroundColor: Color(0xffDEF9FF),
       body: Stack(
           children: [
             SingleChildScrollView(
@@ -30,7 +30,7 @@ class _loginState extends State<login> {
                   ),
                   Image.asset(
                     "assets/images/logo.png",
-                    scale: 0.8,
+                    scale: 1.8,
                   ),
                   const SizedBox(height: 20),
                   Padding(

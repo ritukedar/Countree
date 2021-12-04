@@ -1,4 +1,5 @@
 import 'package:countree/const/my_button.dart';
+import 'package:countree/screens/razorpay.dart';
 import 'package:flutter/material.dart';
 
 class Donation extends StatefulWidget {
@@ -20,7 +21,9 @@ class _DonationState extends State<Donation> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>razorPayment()));
+            },
             child: MyButton(
               text: "Donate",
             )),

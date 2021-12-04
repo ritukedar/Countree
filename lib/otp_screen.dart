@@ -29,7 +29,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     children: [
                       Image.asset(
                         "assets/images/logo.png",
-                        scale: 0.8,
+                        scale: 1.8,
                       ),
                       const SizedBox(
                         height: 40,

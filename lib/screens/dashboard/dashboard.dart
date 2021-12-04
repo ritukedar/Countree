@@ -1,4 +1,5 @@
 import 'package:countree/screens/dashboard/home.dart';
+import 'package:countree/screens/dashboard/prof.dart';
 import 'package:countree/screens/dashboard/profilee.dart';
 import 'package:countree/screens/dashboard/post.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,7 @@ class _dashBoardState extends State<dashBoard> {
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/images/post.png"),
+              AssetImage("assets/images/post.jpeg"),
             ),
             label: 'Post',
           ),
@@ -62,6 +63,6 @@ class _dashBoardState extends State<dashBoard> {
   static final List<Widget> _widgetOptions = <Widget>[
     Home(),
     post(),
-    Profile(),
+    prof(),
   ];
 }

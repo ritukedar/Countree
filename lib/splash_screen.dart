@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'package:countree/login.dart';
+import 'package:countree/screens/selection_screen.dart';
+import 'package:countree/screens/sign_up_in.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,7 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>login()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
   }
 
   @override

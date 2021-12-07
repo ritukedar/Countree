@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         android:label="countree"
         android:icon="@mipmap/ic_launcher">
@@ -43,6 +43,6 @@
             android:name="flutterEmbedding"
             android:value="2" />
        <meta-data android:name="com.google.android.geo.API_KEY"
-           android:value="AIzaSyAuZJ9OG1_k93UuXke5RQkCg4VcBSYHfcg"/>
+           android:value="AIzaSyD0pY7U33thAQtBctEJBtVzgMNhaFnXVRA"/>
     </application>
 </manifest>

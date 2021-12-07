@@ -1,7 +1,9 @@
 import 'package:countree/screens/dashboard/home.dart';
+import 'package:countree/screens/dashboard/our_mission.dart';
 import 'package:countree/screens/dashboard/prof.dart';
 import 'package:countree/screens/dashboard/profilee.dart';
 import 'package:countree/screens/dashboard/post.dart';
+import 'package:countree/screens/donation_page.dart';
 import 'package:flutter/material.dart';
 
 class dashBoard extends StatefulWidget {
@@ -33,10 +35,20 @@ class _dashBoardState extends State<dashBoard> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.flag,size: 40,),
+            label: 'Our Mission',
+          ),
+          BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage("assets/images/post.jpeg"),
             ),
             label: 'Post',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage("assets/images/donate.png"),
+            ),
+            label: 'Donate',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
@@ -62,7 +74,9 @@ class _dashBoardState extends State<dashBoard> {
   }
   static final List<Widget> _widgetOptions = <Widget>[
     Home(),
+    OurMission(),
     post(),
+    Donation(),
     prof(),
   ];
 }

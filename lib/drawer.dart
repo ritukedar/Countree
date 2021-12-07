@@ -1,3 +1,4 @@
+import 'package:countree/google_maps/google_map.dart';
 import 'package:countree/screens/certificate.dart';
 import 'package:countree/screens/demo.dart';
 import 'package:countree/screens/donation_page.dart';
@@ -38,7 +39,7 @@ class _drawerState extends State<drawer> {
                 ),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage(title: '',)));
+                    // Navigator.push(context, MaterialPageRoute(builder: (context)=>ImageFromGalleryEx()));
                   },
                   child: ListTile(
                     leading: Image.asset(
@@ -123,7 +124,7 @@ class _drawerState extends State<drawer> {
                 ),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MapSample()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
                   },
                   child: ListTile(
                     leading: Image.asset(

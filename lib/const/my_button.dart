@@ -12,11 +12,11 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 40,
-        width: 170,
+        height: 50,
+        width:170,
         decoration: BoxDecoration(
           color:   Color(0xff0D1180),
-          borderRadius: BorderRadius.circular(7),
+          borderRadius: BorderRadius.circular(30),
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -29,7 +29,7 @@ class MyButton extends StatelessWidget {
 
         ),
         child:Center(child:
-        Text(text, style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.w600),))
+        Text(text, style: TextStyle(fontSize: 22,color: Colors.white,fontWeight: FontWeight.w600),))
     );
   }
 }

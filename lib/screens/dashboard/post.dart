@@ -51,206 +51,164 @@ class _postState extends State<post> {
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 30,
             ),
-            Image.asset(
-              "assets/images/card.png",
-              scale: 0.8,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: Text(
+                'Register Trees',
+                style: TextStyle(
+                  fontFamily: 'OtomanopeeOne-Regular',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: Text(
+                'Please use this form to register the trees you have planted personally',
+                style: TextStyle(
+                  fontFamily: 'OtomanopeeOne-Regular',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            // Image.asset(
+            //   "assets/images/card.png",
+            //   scale: 0.8,
+            // ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 500,
+              width: MediaQuery.of(context).size.width,
+              child: Card(
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 30.0, vertical: 10),
-                        child: GestureDetector(
-                          onTap: () {
-                            showModalBottomSheet(
-                                context: context,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.vertical(
-                                      top: Radius.circular(25.0)),
-                                ),
-                                builder: (BuildContext context) {
-                                  return ListTile(
-                                    leading: Image.asset(
-                                      "assets/images/profile.png",
-                                      scale: 0.9,
-                                    ),
-                                    title: Text(
-                                      'Profile',
-                                      style: TextStyle(
-                                        fontFamily: 'OtomanopeeOne-Regular',
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  );
-                                });
-                          },
-                          child: TextField(
-                            style: const TextStyle(
-                                fontSize: 20, color: Colors.black87),
-                            keyboardType: TextInputType.phone,
-                            decoration: InputDecoration(
-                                contentPadding:
-                                const EdgeInsets.symmetric(vertical: 10.0),
-                                fillColor: Colors.white,
-                                filled: true,
-                                suffixIcon: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10.0, vertical: 3),
-                                  child:
-                                  const Icon(Icons.arrow_drop_down_circle),
-                                ),
-                                hintText: '   List Of Trees Or Others',
-                                hintStyle: TextStyle(fontSize: 14),
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10))),
-                          ),
-                        ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 28.0),
+                  child: Text(
+                                          'Add Image',
+                                          style: TextStyle(
+                                            fontFamily: 'OtomanopeeOne-Regular',
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                ),
+                    Row(
+                      children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 10),
+                        child: Container(
+                          color: Colors.black26,
+                          height: 70,
+                            width: 70,
+                            child: Icon(Icons.add_a_photo_outlined,size: 60,)),
+                      ),
+                        Container(
+                            color: Colors.black26,
+                            height: 70,
+                            width: 70,
+                            child: Icon(Icons.collections_outlined,size: 60,)),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Text(
+                        "Occassion",
+                        style:
+                            TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                     ),
-                    Expanded(
-                      flex: 1,
-                      child:Padding(
-                        padding: const EdgeInsets.only(right:30.0),
-                        child: Container(
-                            height: 50, width: 50,
-                            decoration: BoxDecoration(
-                              color: Color(0xff008101),
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                            ),
-                            child: Center(
-                              child: Text("100",style:GoogleFonts.lora(textStyle: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18, fontWeight: FontWeight.bold),)),
-                            )),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0, vertical: 10),
+                      child: TextField(
+                        style:
+                            const TextStyle(fontSize: 20, color: Colors.black87),
+                        // controller: _mobileNumberController,
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                            contentPadding:
+                                const EdgeInsets.symmetric(vertical: 10.0),
+                            fillColor: Colors.white,
+                            filled: true,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10))),
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Text(
+                        "Add Description",
+                        style:
+                            TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0, vertical: 10),
+                      child: TextField(
+                        style:
+                            const TextStyle(fontSize: 20, color: Colors.black87),
+                        // controller: _mobileNumberController,
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                            contentPadding:
+                                const EdgeInsets.symmetric(vertical: 40.0),
+                            fillColor: Colors.white,
+                            filled: true,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Text(
+                        "Location",
+                        style:
+                            TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 30.0, vertical: 10),
+                      child: TextField(
+                        style:
+                            const TextStyle(fontSize: 20, color: Colors.black87),
+                        // controller: _mobileNumberController,
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                            contentPadding:
+                                const EdgeInsets.symmetric(vertical: 40.0),
+                            fillColor: Colors.white,
+                            filled: true,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                      ),
+                    ),
                   ],
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 15),
-                //   child: Container(
-                //     padding: EdgeInsets.symmetric(horizontal: 15.0),
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(10.0),
-                //       border: Border.all(
-                //           color: Colors.black, width: 0.90),
-                //     ),
-                //     child: DropdownButton(
-                //       isExpanded: true,
-                //       hint: Text(
-                //         'Select Tree Type : ',
-                //         style: TextStyle(
-                //           fontFamily: 'OtomanopeeOne-Regular',
-                //           fontWeight: FontWeight.normal,
-                //           fontSize: 12,
-                //         ),
-                //       ),
-                //       // value: chooseName,
-                //       icon: Icon(Icons.arrow_drop_down),
-                //       onChanged: (newValue) {
-                //         showModalBottomSheet(
-                //             context: context,
-                //             shape: RoundedRectangleBorder(
-                //               borderRadius: BorderRadius.vertical(top: Radius.circular(25.0)),
-                //             ),
-                //             builder: (BuildContext context) {
-                //               return Column(
-                //                 children: [
-                //
-                //                 ],
-                //               );
-                //             });
-                //       },
-                //       items: listItemName.map(
-                //             (valueItem) {
-                //           return DropdownMenuItem(
-                //               value: valueItem, child: Text(valueItem));
-                //         },
-                //       ).toList(),
-                //     ),
-                //   ),
-                // ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Text(
-                    "Occassion",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 30.0, vertical: 10),
-                  child: TextField(
-                    style: const TextStyle(fontSize: 20, color: Colors.black87),
-                    // controller: _mobileNumberController,
-                    keyboardType: TextInputType.phone,
-                    decoration: InputDecoration(
-                        contentPadding:
-                        const EdgeInsets.symmetric(vertical: 10.0),
-                        fillColor: Colors.white,
-                        filled: true,
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Text(
-                    "Add Description",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 30.0, vertical: 10),
-                  child: TextField(
-                    style: const TextStyle(fontSize: 20, color: Colors.black87),
-                    // controller: _mobileNumberController,
-                    keyboardType: TextInputType.phone,
-                    decoration: InputDecoration(
-                        contentPadding:
-                        const EdgeInsets.symmetric(vertical: 40.0),
-                        fillColor: Colors.white,
-                        filled: true,
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                  child: Text(
-                    "Location",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 30.0, vertical: 10),
-                  child: TextField(
-                    style: const TextStyle(fontSize: 20, color: Colors.black87),
-                    // controller: _mobileNumberController,
-                    keyboardType: TextInputType.phone,
-                    decoration: InputDecoration(
-                        contentPadding:
-                        const EdgeInsets.symmetric(vertical: 40.0),
-                        fillColor: Colors.white,
-                        filled: true,
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
-                  ),
-                ),
-              ],
+              ),
             ),
           ],
         ),
